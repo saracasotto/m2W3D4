@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        /*HO INSERITO LO STILE NELL'HEAD PERCHE' IL COMPITO RICHIEDEVA USO ESCLUSIVO DI HTML*/
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    
+        body {
+            font-family: roboto;
+            color: white;
+            width: 100%;
+            background-color: #8e8e90;
+            transition: background-color 2s ease;
+        }
+
+        #titolo {
+            margin-left: 30%;
+            margin-right: 30%;
+            background-color: #49494b;
+            text-align: center;
+        }
+
+        #prodotti {
+            text-align: center;
+            width: 100%;
+        }
+
+        #prodotti table {
+            margin-left: 30%;
+            margin-right: 30%;
+            padding: 1%;
+            background-color: #49494b;
+        }
+
+        table img {
+            height: auto;
+            width: 100%;
+        }
+
+        table a {
+            text-decoration: none;
+            color: #bd8c7d;
+            font-weight: bold;
+            font-size: 1.3em;
+
+
+        }
+
+        .price {
+            color: #bd8c7d;
+            font-weight: bold;
+        }
+
+
+        .comment {
+            width: 95%;
+            border-radius: 10px;
+            height: 4em;
+            resize: none;
+            margin: 1%;
+        }
+
+        button {
+            font-family: roboto;
+            font-size: 1em;
+            margin-bottom: 1%;
+
+        }
+
+        #address {
+            text-align: center;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+
+    <title>Digital Wonders</title>
+
+</head>
+
+<!--//ESERCIZI IN HTML
+
+// ESERCIZIO 1: Inserisci un tag h1 con il nome del tuo negozio
+// ESERCIZIO 2: Aggiungi una tabella con i 5 prodotti più in vista del tuo negozio
+// ESERCIZIO 3: Aggiungi per ogni prodotto un'immagine, un titolo, una descrizione e un prezzo
+// ESERCIZIO 4: Per ogni elemento della tabella aggiungi un link di Amazon al prodotto esistente
+// ESERCIZIO 5: Aggiungi un footer con il nome e l'indirizzo del tuo negozio
+// ESERCIZIO 6: Aggiungi un campo testuale in cui l'utente può lasciare un commento su un prodotto (al momento non serve inserire nessuna "vera" funzionalità di POST/salvataggio!)
+-->
+
+<!--FUNZIONE CAMBIO COLORE BODY-->
+
+<body onmouseover="changeBg(true)" onmouseout="changeBg(false)">
+
+    <!--FUNZIONE CAMBIO COLORE E CONTENUTO TITOLO-->
+    
+    <h1 id="titolo" onmouseover="changeTitle(true)" onmouseout="changeTitle(false)">
+        Digital Wonders - Online Store
+    </h1>
+    <div id="prodotti">
+        <table>
+            <tr>
+                <td>
+                    <img src="assets/ebook.jpg" alt="Ebooks">
+                    <h2>Bestseller Ebook Bundle</h2>
+                    <a href="https://shorturl.at/ovF34" target="_blank">Buy product</a>
+                    <p>Unlock a world of knowledge and entertainment with our Bestseller Ebook Bundle.
+                        Dive into captivating stories, explore insightful non-fiction, and expand your horizons with
+                        this curated collection of ebooks.
+                        Whether you're looking for fiction escapism or practical guides, this bundle has something for
+                        everyone.</p>
+                    <p class="price">FROM 3,99 $</p>
+                    <form>
+                        <label for="comment">Leave a comment!</label>
+                        <br><textarea class="comment" name="comment"></textarea>
+                        <br><button type="submit">Send</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="assets/videoediting.jpg" alt="Video Editor">
+                    <h2>Photo Director 2024 AI Powered</h2>
+                    <a href="https://shorturl.at/czFV6" target="_blank">Buy Product</a>
+                    <p>Elevate your photography game with Photo Director 2024 AI Powered.
+                        Harness the cutting-edge technology of artificial intelligence to effortlessly enhance your
+                        photos and bring your creative vision to life. From intelligent editing tools to advanced image
+                        recognition, Photo Director empowers you to achieve professional-level results with ease.</p>
+                    <p class="price">139,99 $</p>
+                    <form>
+                        <label for="comment">Leave a comment!</label>
+                        <br><textarea class="comment" name="comment"></textarea>
+                        <br><button type="submit">Send</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="assets/wallpaper.jpg" alt="Soundcore">
+                    <h2>Soundcore 2 Outdoor Floatable Speaker</h2>
+                    <a href="https://shorturl.at/fh018" target="_blank">Buy Product</a>
+                    <p> ake your music wherever adventure leads you with the Soundcore 2 Outdoor Floatable Speaker.
+                        Designed for outdoor enthusiasts, this rugged speaker delivers immersive sound in any
+                        environment.
+                        With its waterproof and floatable design, you can enjoy your favorite tunes by the pool, at the
+                        beach, or on your next camping trip. </p>
+                    <p class="price">129,99 $</p>
+                    <form>
+                        <label for="comment">Leave a comment!</label>
+                        <br><textarea class="comment" name="comment"></textarea>
+                        <br><button type="submit">Send</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="assets/photography.jpg" alt="Photography course">
+                    <h2>Digital Photography Course</h2>
+                    <a href="https://shorturl.at/beinV" target="_blank">Buy Product</a>
+                    <p>Unleash your creativity behind the lens with our Digital Photography Course. Whether you're a
+                        beginner or seasoned photographer, this comprehensive course covers everything from camera
+                        basics to advanced techniques.
+                        Learn how to compose stunning shots, master lighting, and edit your photos like a pro.</p>
+                    <p class="price"> 47,02 $</p>
+                    <form>
+                        <label for="comment">Leave a comment!</label>
+                        <br><textarea class="comment" name="comment"></textarea>
+                        <br><button type="submit">Send</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="assets/music.jpg" alt="Bose QuietComfort" height="auto" width="100%">
+                    <h2>Bose QuietComfort Ultra</h2>
+                    <a href="https://shorturl.at/chT37" target="_blank">Buy Product</a>
+                    <p>Immerse yourself in pure sound and tranquility with the Bose QuietComfort Ultra headphones.
+                        Engineered for supreme comfort and unparalleled noise cancellation, these headphones deliver an
+                        unparalleled listening experience.
+                        Whether you're traveling, working, or relaxing at home, escape into your own world of music with
+                        QuietComfort Ultra.</p>
+                    <p class="price">FROM 360,00 $</p>
+                    <form>
+                        <label for="comment">Leave a comment!</label>
+                        <br><textarea class="comment" name="comment"></textarea>
+                        <br><button type="submit">Send</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <footer>
+        <p id="address">
+            <br>Digital Wonders Store
+            <br>123 Main
+            <br>Anytown, NY 12345
+            <br>United States
+        </p>
+    </footer>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
