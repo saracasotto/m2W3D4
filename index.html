@@ -15,12 +15,11 @@
             color: white;
             width: 100%;
             background-color: #8e8e90;
-            transition: background-color 2s ease;
         }
 
         #titolo {
-            margin-left: 30%;
-            margin-right: 30%;
+            margin-left: 15%;
+            margin-right: 15%;
             background-color: #49494b;
             text-align: center;
         }
@@ -31,8 +30,8 @@
         }
 
         #prodotti table {
-            margin-left: 30%;
-            margin-right: 30%;
+            margin-left: 15%;
+            margin-right: 15%;
             padding: 1%;
             background-color: #49494b;
         }
@@ -93,14 +92,14 @@
 // ESERCIZIO 6: Aggiungi un campo testuale in cui l'utente può lasciare un commento su un prodotto (al momento non serve inserire nessuna "vera" funzionalità di POST/salvataggio!)
 -->
 
-<!--FUNZIONE CAMBIO COLORE BODY-->
+<!--FUNZIONE CAMBIO COLORE BODY QUANDO UTENTE TOCCA SCHERMO CON IL DITO-->
 
-<body onmouseover="changeBg(true)" onmouseout="changeBg(false)">
+<body ontouchstart="changeBg(true)" ontouchend="changeBg(false)">
 
-    <!--FUNZIONE CAMBIO COLORE E CONTENUTO TITOLO-->
+    <!--FUNZIONE CAMBIO COLORE E CONTENUTO TITOLO QUANDO UTENTE TOCCA TITOLO CON IL DITO-->
     
-    <h1 id="titolo" onmouseover="changeTitle(true)" onmouseout="changeTitle(false)">
-        Digital Wonders - Online Store
+    <h1 id="titolo" ontouchstart="changeTitle(true)" ontouchend="changeTitle(false)">
+        Digital Wonders Online Store
     </h1>
     <div id="prodotti">
         <table>
@@ -114,7 +113,7 @@
                         this curated collection of ebooks.
                         Whether you're looking for fiction escapism or practical guides, this bundle has something for
                         everyone.</p>
-                    <p class="price">FROM 3,99 $</p>
+                    <p class="price">Starting from 3,99 $</p>
                     <form>
                         <label for="comment">Leave a comment!</label>
                         <br><textarea class="comment" name="comment"></textarea>
@@ -184,7 +183,7 @@
                         unparalleled listening experience.
                         Whether you're traveling, working, or relaxing at home, escape into your own world of music with
                         QuietComfort Ultra.</p>
-                    <p class="price">FROM 360,00 $</p>
+                    <p class="price">Starting from 360,00 $</p>
                     <form>
                         <label for="comment">Leave a comment!</label>
                         <br><textarea class="comment" name="comment"></textarea>

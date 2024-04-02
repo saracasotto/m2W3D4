@@ -12,8 +12,8 @@
 originalTitle = document.getElementById("titolo").innerHTML
 
 
-function changeTitle(isMouseOver) {
-    if (isMouseOver) {
+function changeTitle(isTouch) {
+    if (isTouch) {
         document.getElementById("titolo").innerHTML = "Extraordinary digital experiences"
         document.getElementById("titolo").style.color = "#bd8c7d"
     } else {
@@ -25,8 +25,8 @@ function changeTitle(isMouseOver) {
 
 // ESERCIZIO 8: Scrivi una funzione per cambiare il colore di background della pagina
 
-function changeBg(isMouseOver) {
-    if (isMouseOver) {
+function changeBg(isTouchstart) {
+    if (isTouchstart) {
         document.body.style.backgroundColor = "#bd8c7d"
     } else {
         document.body.style.backgroundColor = "#8e8e90"
@@ -42,18 +42,18 @@ function changeAddress() {
 
 // ESERCIZIO 10: Scrivi una funzione per aggiungere una classe CSS ad ogni link Amazon della tabella
 
-function addClass(){
+function addClass() {
     amazonLinks = document.getElementsByTagName("a")
-    for(i = 0; i < amazonLinks.length; i++) {
+    for (i = 0; i < amazonLinks.length; i++) {
         amazonLinks[i].style.color = "lightsalmon"
     }
 }
 
 // ESERCIZIO 11: Scrivi una funzione per aggiungere/togliere una classe CSS a tutte le immagini della tabella; questa classe deve modificare la visibilità/invisibilità dell'immagine
 
-function imgClass(){
+function imgClass() {
     productImage = document.getElementsByTagName("img")
-    for(i = 0; i < productImage.length; i++) {
+    for (i = 0; i < productImage.length; i++) {
         productImage[i].style.visibility = "hidden"
     }
 }
@@ -61,11 +61,11 @@ function imgClass(){
 // ESERCIZIO 12: Scrivi una funzione per cambiare il colore del prezzo di ogni prodotto in uno differente, ogni volta che viene invocata
 //HO UTILIZZATO COLORI CHE SI ADEGUASSERO BENE ALLO STILE DELLA PAGINA
 
-function priceColorClass(){
+function priceColorClass() {
     priceColor = document.getElementsByClassName("price")
     colors = ["lightcoral", "lightblue", "mocassin", "wheat", "khaki", "peru"]
-    for(i = 0; i < priceColor.length; i++) {
-        randomColor =  Math.floor(Math.random() * colors.length)
+    for (i = 0; i < priceColor.length; i++) {
+        randomColor = Math.floor(Math.random() * colors.length)
         priceColor[i].style.color = colors[randomColor]
     }
 }
